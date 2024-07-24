@@ -143,7 +143,7 @@ def getPredictions(image):
     for l, r, t, b, label, token in img_tagging.values:
         cv2.rectangle(img_bb, (l, t), (r, b), (0, 255, 0), 2)
 
-        cv2.putText(img_bb, label, (l, t),
+        cv2.putText(img_bb, str(label), (l, t),
                     cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 255), 2)
 
     # Entities
