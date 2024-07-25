@@ -1,6 +1,7 @@
 from pydoc import doc
 from flask import Flask, render_template, request
 from utils import *
+import predictions as pd
 import numpy as np
 app = Flask(__name__)
 app.secret_key = 'NER_PROJECT'
@@ -51,7 +52,13 @@ def transform():
 
 @app.route('/prediction')
 def prediction():
-    return 'Successfully wrap image'
+    wrap_image_filepath = settings.join_path(
+        settings.MEDIA_DIR, 'magic_color.jpg')
+    image = cv2.imread(wrap_image_filepath)
+    image_bb, results = pd.getPredictions(image)
+    bb_filename = settings.join_path(settings.MEDIA_DIR, 'bounding_box.jpg')
+    cv2.imwrite(bb_filename, image_bb)
+    return render_template('predictions.html', results=results)
 
 
 @app.route('/about')
