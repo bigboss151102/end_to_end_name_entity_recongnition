@@ -10,6 +10,14 @@
 In this project, we will develop a Customized Named Entity Recognizer. The main idea of this project is to extract entities from scanned documents such as invoices,business cards, shipping bills, bills of lading, etc. However, due to data privacy reasons, we will focus only on business cards. But we can use the explained framework to handle all types of financial documents. Below is the development process that we will follow in the project. Todevelop this project, we will use two main technologies in data science :
 - Computer Vision: In Computer Vision module, we will scan the document, identify the location of text and finally extract text from the image.
 - Natural Language Processing: Then in Natural language processing, we will extract the entitles from the text and do necessary text cleaning and parse the entities form the text.
+Since we are combining two main technologies to develop the project, to make it easier to understand, we will divide the project into different stages of development.
+- Stage 1: We will setup the project by doing the necessary installations and requirements.
+- Stage 2: We will do data preparation. That is we will extract text from images using Pytesseract and also do necessary cleaning.
+- Stage 3: We will see how to label NER data using BIO tagging.
+- Stage 4: We will further clean the text and preprocess the data for to train machine learning.
+- Stage 5: With the preprocess data we will train the Named Entity model.
+- Stage 6: We will predict the entitles using NER and model and create data pipeline for parsing
+        text.
 # Idea
 ![Idea](./idea.png)
 # Design System
