@@ -1,7 +1,8 @@
-## Table of Contents
+#    Table of Contents
 - [Description](#description)
 - [Idea](#idea)
-- [Design System](#design-system)
+- [System Architecture](#system-architecture)
+- [Training Architecture](#training-architecture)
 - [Installation](#installation)
 - [Run Application](#run-application)
 - [Contact](#contact)
@@ -23,7 +24,10 @@ Since we are combining two main technologies to develop the project, to make it 
 # Idea
 ![Idea](./idea.png)
 # Design System
-![Desigin System](./design-system.jpg)
+### System Architecture
+![System Architecture](./architecture.png)
+### Training Architecture
+![Training Architecture](./training_architecture.png)
 
 # Installation
 ### Create Virtual Environment
@@ -42,17 +46,13 @@ pip install -r requirements.txt
 ```
 
 # Run Application
-All done! To run the application, start the Django server and the React development server
-In 2 separate terminals, make sure you’re in the root directory of your Django project, run:
+All done! To run the application, start the Flask server:
 ```cmd
-python manage.py runserver
-```
-and in the frontend directory, run:
+cd App
 ```cmd
-cd frontend
-npm run dev
+python main.py
 ```
-Visit the URL shown in your terminal (usually http://localhost:5173/) to view the app.
+Visit the URL shown in your terminal (usually http://127.0.0.1:5000) to view the app.
 
 # Contact
 For questions, contributions, or bug reports, please feel free to reach out:
