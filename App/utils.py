@@ -105,5 +105,5 @@ class DocumentScanner():
 
         # Apply magic color to wrap image
         magic_color = self.apply_brightness_contrast(
-            wrap_image, brightness=40, contrast=40)
+            wrap_image, contrast=40)
         return magic_color

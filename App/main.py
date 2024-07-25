@@ -1,7 +1,7 @@
 from pydoc import doc
 from flask import Flask, render_template, request
 from utils import *
-
+import numpy as np
 app = Flask(__name__)
 app.secret_key = 'NER_PROJECT'
 
@@ -16,8 +16,8 @@ def scanner():
         print(upload_image_path)
         # predict the coordination of the document
         four_points, size = document_scan.document_scanner(upload_image_path)
-        # print(four_points)
-        # print(size)
+        print(four_points)
+        print(size)
         if four_points is None:
             message = "Point displayed are random"
             points = [
@@ -33,9 +33,25 @@ def scanner():
             return render_template('scanner.html', fileupload=True, message=message, points=points)
     return render_template('scanner.html')
 
-@app.route('/transform')
+
+@app.route('/transform', methods=['POST'])
 def transform():
-    return render_template('transform.html')
+    try:
+        points = request.json['data']
+        array = np.array(points)
+        magic_color = document_scan.caculate_to_original_size(array)
+        filename = 'magic_color.jpg'
+        magic_color_path = settings.join_path(settings.MEDIA_DIR, filename)
+        cv2.imwrite(magic_color_path, magic_color)
+        return 'success'
+
+    except:
+        return 'fail'
+
+
+@app.route('/prediction')
+def prediction():
+    return 'Successfully wrap image'
 
 
 @app.route('/about')

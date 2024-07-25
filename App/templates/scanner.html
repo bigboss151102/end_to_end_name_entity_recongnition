@@ -10,6 +10,12 @@
             <input type="submit" value="Upload" class="bth btn-primary">
         </div>
     </form>
+    <br>
+    {% if fileupload %}
+        <div class = 'row'>
+            <button class = "btn btn-primary" id = "sendData">Wrap Document and Extract Text</button>
+        </div>
+    {% endif %}
 </div>
 
 <!-- Create Canvas -->
