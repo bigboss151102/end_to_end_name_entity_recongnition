@@ -1,11 +1,11 @@
 #    Table of Contents
+- [Demo](#demo)
 - [Description](#description)
 - [Idea](#idea)
 - [System Architecture](#system-architecture)
 - [Training Architecture](#training-architecture)
 - [Installation](#installation)
 - [Run Application](#run-application)
-- [Demo](#demo)
 - [Contact](#contact)
 
 # Demo
