@@ -8,6 +8,9 @@
 - [Demo](#demo)
 - [Contact](#contact)
 
+# Demo
+![Demo](./demo.gif)
+
 # Description
 In this project, we will develop a Customized Named Entity Recognizer. The main idea of this project is to extract entities from scanned documents such as invoices,business cards, shipping bills, bills of lading, etc. However, due to data privacy reasons, we will focus only on business cards. But we can use the explained framework to handle all types of financial documents. Below is the development process that we will follow in the project. Todevelop this project, we will use two main technologies in data science :
 - Computer Vision: In Computer Vision module, we will scan the document, identify the location of text and finally extract text from the image.
@@ -56,9 +59,6 @@ python main.py
 ```
 Visit the URL shown in your terminal (usually http://127.0.0.1:5000) to view the app.
 
-
-# Demo
-![Demo](./demo.gif)
 
 # Contact
 For questions, contributions, or bug reports, please feel free to reach out:
