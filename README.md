@@ -49,6 +49,7 @@ pip install -r requirements.txt
 All done! To run the application, start the Flask server:
 ```cmd
 cd App
+```
 ```cmd
 python main.py
 ```
