@@ -163,3 +163,5 @@ cython_debug/
 /data
 /datasets
 /data_vn
+/App/static/media
+/App/static/images
