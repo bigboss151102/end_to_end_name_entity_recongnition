@@ -55,6 +55,10 @@ python main.py
 ```
 Visit the URL shown in your terminal (usually http://127.0.0.1:5000) to view the app.
 
+
+### Demo
+![Video GIF](E:/FILE of Trong/NLP Project/ner/demo.gif)
+
 # Contact
 For questions, contributions, or bug reports, please feel free to reach out:
 
